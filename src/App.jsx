@@ -2,6 +2,16 @@ import { useState } from "react"
 import "./App.css"
 import { categories } from "./data/projects"
 
+
+const images = import.meta.glob("./assets/*.{png,jpg,jpeg,svg}", {
+  eager: true,
+  import: "default"
+})
+
+const getImage = (name) => {
+  return images[`./assets/${name}`]
+}
+
 function App() {
   const [openCategory, setOpenCategory] = useState("cfd")
   const [selectedProject, setSelectedProject] = useState(null)
@@ -67,8 +77,12 @@ function App() {
         </div>
 
         <div className="portraitCard">
-          <div className="portraitPlaceholder">
-            <span>Add photo</span>
+          <div className="portraitWrap">
+            <img
+              src={getImage("veteran.png")}
+              alt="Profile"
+              className="portraitImage"
+            />
           </div>
         </div>
       </section>
