@@ -76,11 +76,12 @@ function App() {
             at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns & McDonnell.
           </p>
 
-          <div className="heroTags">
-            <span>CFD</span>
-            <span>Mechanical Design</span>
-            <span>Robotics</span>
-            <span>Academia</span>
+          <div className="logoRow">
+            <img src={getImage("berkeley.svg")} alt="UC Berkeley" />
+            <img src={getImage("tesla.jpg")} alt="Tesla" />
+            <img src={getImage("spacex.jpg")} alt="SpaceX" />
+            <img src={getImage("bmcd.png")} alt="Burns & McDonnell" />
+            <img src={getImage("nsf.jpg")} alt="NSF" />
           </div>
         </div>
 

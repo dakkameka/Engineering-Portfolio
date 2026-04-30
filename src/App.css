@@ -349,3 +349,26 @@ button {
   border: 1px solid rgba(255,255,255,0.85);
   box-shadow: 0 16px 44px rgba(80,100,140,0.12);
 }
+.logoRow {
+  display: flex;
+  gap: 18px;
+  margin-top: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logoRow img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+
+  opacity: 0.85;
+  filter: grayscale(50%);
+  transition: all 0.2s ease;
+}
+
+.logoRow img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
