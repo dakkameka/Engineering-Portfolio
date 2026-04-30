@@ -2,7 +2,6 @@ import { useState } from "react"
 import "./App.css"
 import { categories } from "./data/projects"
 
-
 const images = import.meta.glob("./assets/*.{png,jpg,jpeg,svg}", {
   eager: true,
   import: "default"
@@ -26,6 +25,14 @@ function App() {
           <button className="backButton" onClick={() => setSelectedProject(null)}>
             ← Back to portfolio
           </button>
+
+          {selectedProject.image && (
+            <img
+              src={getImage(selectedProject.image)}
+              alt={selectedProject.title}
+              className="projectHeroImage"
+            />
+          )}
 
           <p className="eyebrow">{selectedProject.tag}</p>
           <h1>{selectedProject.title}</h1>
@@ -64,9 +71,8 @@ function App() {
           <p className="eyebrow">Engineering Portfolio</p>
           <h1>Lilly Sweet</h1>
           <p className="bio">
-            Mechanical engineering graduate student focused on computational fluid dynamics,
-            mechanical design, and robotics. My work connects physical modeling, experimental
-            systems, numerical simulation, and hardware-driven engineering.
+            Mechanical engineering graduate student at UC Berkeley and former Combat Medic Sergeant in the US Army. 
+            Passionate about fluid dynamics, mechanical design, and robotics. I have ongoing work with the Flow Lab at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns & McDonnell.
           </p>
 
           <div className="heroTags">
@@ -108,6 +114,14 @@ function App() {
                 <div className="carousel">
                   {category.projects.map((project) => (
                     <article className="projectCard" key={project.id}>
+                      {project.image && (
+                        <img
+                          src={getImage(project.image)}
+                          alt={project.title}
+                          className="projectImage"
+                        />
+                      )}
+
                       <p className="projectTag">{project.tag}</p>
                       <h3>{project.title}</h3>
                       <p>{project.summary}</p>

@@ -2,68 +2,71 @@ export const categories = [
   {
     id: "cfd",
     title: "CFD",
-    subtitle: "Fluids, fire, combustion, X-ray diagnostics, and numerical modeling.",
+    subtitle: "Custom solvers and Comercial CFD applications!",
     projects: [
       {
-        id: "limited-angle-xpiv",
-        title: "Limited-Angle X-ray Flow Imaging",
-        tag: "Diagnostics / Reconstruction",
-        summary: "X-ray based flow and material measurement work using limited-angle imaging methods.",
-        tools: ["Python", "MATLAB", "ASTRA", "CT", "Signal Processing"],
+        id: "C-Fitted Shock",
+        title: "C-Fitted Shock Capturing",
+        image: "cshock.jpg",
+        tag: "Numerical Methods",
+        summary: "Development of higher-order compressible flow solvers with C-fitted shock capturing.",
+        tools: ["Python", "MATLAB", "CFD", "Numerical Analysis"],
         detail:
-          "This project focuses on reconstructing useful physical information from limited-angle X-ray measurements. The work connects detector geometry, attenuation physics, reconstruction methods, and uncertainty analysis."
+          "This project focuses on developing and analyzing numerical methods for compressible flow simulations, particularly those involving shocks. The C-fitted shock capturing approach allows for accurate resolution of shock waves while maintaining higher-order accuracy in smooth regions of the flow."
       },
       {
-        id: "fire-transport",
-        title: "Fire and Emissions Transport Modeling",
-        tag: "Combustion / Wildfire",
-        summary: "Numerical modeling of large-scale fire spread, soot transport, and plume injection.",
-        tools: ["ELMFIRE", "Python", "Fortran", "Level Sets", "GIS"],
+        id: "Converging-Diverging Nozzle",
+        title: "Converging-Diverging Nozzle",
+        image: "convergediverge.png",
+        tag: "Numerical Methods",
+        summary: "Achieved stable, higher-order solutions for compressible flow in a converging-diverging nozzle geometry. Accomplished using FR/CPR, Discontinuous Spectral Element, and Discontinuous Galerkin methods.",
+        tools: ["Python", "MATLAB", "CFD", "Numerical Analysis"],
         detail:
-          "This work studies how large fires spread, emit combustion products, and inject material into the atmosphere. The modeling combines level-set fire propagation, terrain/fuel data, and emissions/injection physics."
+          "This project focuses on developing and analyzing numerical methods for compressible flow simulations in a converging-diverging nozzle geometry. The work involves implementing and validating higher-order discretization schemes to achieve accurate and stable solutions."
       },
       {
-        id: "wrf-analysis",
-        title: "WRF Flow Field Analysis",
-        tag: "Atmospheric CFD",
-        summary: "Post-processing wind, scalar, and transport fields from numerical weather models.",
-        tools: ["MATLAB", "NetCDF", "WRF", "Visualization"],
+        id: "FSAE Aerodynamics",
+        title: "FSAE Aerodynamics",
+        image: "FSAE.jpg",
+        tag: "Vehicle Dynamics",
+        summary: "Aerodynamic analysis and optimization for Formula SAE race cars.",
+        tools: ["Star-CCM+", "CFD", "Simulation"],
         detail:
-          "This project involves extracting and visualizing atmospheric model output, including wind fields, scalar concentration fields, and transport patterns relevant to fire and aerosol problems."
+          "This project involves using CFD tools to analyze and optimize the aerodynamics of Formula SAE race cars. The work includes simulating airflow around the vehicle, evaluating downforce and drag characteristics, and iterating on design modifications to improve performance on the track."
       }
     ]
   },
   {
     id: "mechanical",
     title: "Mechanical Design",
-    subtitle: "Hardware, structures, test fixtures, thermal systems, and manufacturable design.",
+    subtitle: "Mechanically designing and innovating hardware systems for practical applications.",
     projects: [
       {
-        id: "xray-regolith-bed",
-        title: "X-ray Regolith Bed Measurement System",
-        tag: "Experimental Hardware",
-        summary: "Mechanical and diagnostic system concept for measuring evolving regolith thickness.",
-        tools: ["CAD", "X-ray Imaging", "Experimental Design", "MATLAB"],
+        id: "Coach Nova",
+        title: "Coach Nova",
+        tag: "Microcontrollers/Web Design/API Implementation",
+        summary: "A web-based coaching platform that integrates microcontroller data for real-time feedback and performance tracking.",
+        tools: ["ESP32", "C++", "Python", "React", "Web Development"],
         detail:
-          "This project develops a measurement approach for observing how a granular regolith bed evolves under plume impingement. The design considers source-detector geometry, attenuation, test section size, and measurement uncertainty."
+          "Coach Nova is a web-based coaching platform that integrates data from microcontroller-based sensors to provide real-time feedback and performance tracking for athletes. The system combines embedded hardware, firmware development, backend data processing, and a user-friendly frontend interface to deliver actionable insights and enhance training outcomes."
       },
       {
-        id: "space-thermal-design",
-        title: "Thermal Protection Automation",
-        tag: "Aerospace / Thermal",
-        summary: "Automation and modeling workflows for high-temperature aerospace thermal systems.",
-        tools: ["Python", "Thermal Modeling", "Automation", "CAD"],
+        id: "Pressure-Sensing Insole",
+        title: "Pressure-Sensing Insole System For Camwalker",
+        tag: "Wearables / Sensors",
+        summary: "Embedded pressure-map system for real-time gait and loading visualization.",
+        tools: ["ESP32", "C++", "Python", "Web UI", "Sensors"],
         detail:
-          "This work involved engineering automation for thermal protection system analysis. The goal was to reduce repetitive design and analysis labor while maintaining traceable engineering calculations."
+          "This project uses pressure sensors, embedded electronics, and a lightweight interface to visualize loading patterns. The work combines hardware integration, firmware, data streaming, and user-facing visualization."
       },
       {
-        id: "mechanical-fixtures",
-        title: "Mechanical Test Fixtures",
+        id: "Adaptive Training Wheels",
+        title: "Adaptive Training Wheels",
         tag: "Design / Fabrication",
-        summary: "Fixture and test hardware design for lab-scale engineering experiments.",
-        tools: ["CAD", "3D Printing", "Machining", "Instrumentation"],
+        summary: "Mechanical design and fabrication of adaptive training wheels for bicycles, providing stability and support for novice riders.",
+        tools: ["CAD", "3D Printing", "Mechanical Design", "Fabrication"],
         detail:
-          "This category covers mechanical fixtures, mounts, and test structures designed to support experimental workflows. The emphasis is practical design, iteration speed, and clean integration with sensors or diagnostics."
+          "This project involves the mechanical design and fabrication of adaptive training wheels for bicycles. The training wheels are designed to provide stability and support for novice riders while allowing for gradual adjustment as the rider gains confidence and balance. The work includes CAD modeling, prototyping, and testing to ensure functionality and safety."
       }
     ]
   },
@@ -73,19 +76,19 @@ export const categories = [
     subtitle: "Sensors, embedded systems, controls, mechatronics, and feedback systems.",
     projects: [
       {
-        id: "pressure-insole",
-        title: "Pressure-Sensing Insole System",
-        tag: "Wearables / Sensors",
-        summary: "Embedded pressure-map system for real-time gait and loading visualization.",
-        tools: ["ESP32", "C++", "Python", "Web UI", "Sensors"],
+        id: "Automated Machining Inspection",
+        title: "Automated Machining Inspection",
+        tag: "Automation",
+        summary: "Automated inspection system for machining processes.",
+        tools: ["Computer Vision", "PLC", "Controls", "IRB 1300", "ABB RobotStudio"],
         detail:
-          "This project uses pressure sensors, embedded electronics, and a lightweight interface to visualize loading patterns. The work combines hardware integration, firmware, data streaming, and user-facing visualization."
+          "This project involves developing an automated inspection system for machining processes using computer vision and robotics. The system integrates a PLC for process control, an ABB IRB 1300 robot for handling and positioning, and custom vision algorithms to detect defects and ensure quality control in manufacturing."
       },
       {
-        id: "imu-barbell",
-        title: "IMU Barbell Tracker",
-        tag: "Fitness Robotics",
-        summary: "Concept for tracking bar path, velocity, tilt, depth, and rep quality.",
+        id: "robot1",
+        title: "robot1",
+        tag: "robot1",
+        summary: "add later",
         tools: ["IMU", "Controls", "Signal Processing", "React"],
         detail:
           "This system concept uses inertial sensing to provide real-time feedback during strength training. Target measurements include bar speed, tilt, depth, lockout, and fatigue-related velocity loss."
