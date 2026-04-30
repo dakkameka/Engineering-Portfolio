@@ -11,9 +11,53 @@ const getImage = (name) => {
   return images[`./assets/${name}`]
 }
 
+const logoItems = [
+  {
+    id: "berkeley",
+    image: "berkeley.svg",
+    alt: "UC Berkeley",
+    role: "MS/PhD Mechanical Engineering Student",
+    description:
+      "Graduate researcher at UC Berkeley working on X-ray based flow diagnostics, limited-angle XPIV methods, and energy-resolved spectroscopy."
+  },
+  {
+    id: "tesla",
+    image: "tesla.jpg",
+    alt: "Tesla",
+    role: "Controls Engineering Intern",
+    description:
+      "Worked on PLC integration, Ignition-based SCADA/HMI systems, controls infrastructure, robotics exposure, and manufacturing line support."
+  },
+  {
+    id: "spacex",
+    image: "spacex.jpg",
+    alt: "SpaceX",
+    role: "Raptor Graduate Engineer",
+    description:
+      "Worked on automated machining inspection, robotic vision workflows, process data capture, and engineering data systems for propulsion hardware."
+  },
+  {
+    id: "bmcd",
+    image: "bmcd.png",
+    alt: "Burns & McDonnell",
+    role: "Mechanical Engineering Intern",
+    description:
+      "Developed automated engineering workflow tools using Python and PowerShell and supported CFD integration into ductwork design for datacenters."
+  },
+  {
+    id: "nsf",
+    image: "nsf.jpg",
+    alt: "NSF",
+    role: "NSF Fellow",
+    description:
+      "Grateful for the opportunity and freedom to pursue independent research questions in X-ray diagnostics, inverse problems, and experimental fluid mechanics."
+  }
+]
+
 function App() {
   const [openCategory, setOpenCategory] = useState("cfd")
   const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedLogo, setSelectedLogo] = useState(null)
 
   if (selectedProject) {
     return (
@@ -66,6 +110,25 @@ function App() {
       <div className="aura auraTwo" />
       <div className="aura auraThree" />
 
+      {selectedLogo && (
+        <div className="modalOverlay" onClick={() => setSelectedLogo(null)}>
+          <div className="logoModal glass" onClick={(e) => e.stopPropagation()}>
+            <button className="modalClose" onClick={() => setSelectedLogo(null)}>
+              ×
+            </button>
+
+            <img
+              src={getImage(selectedLogo.image)}
+              alt={selectedLogo.alt}
+              className="modalLogo"
+            />
+
+            <h2>{selectedLogo.role}</h2>
+            <p>{selectedLogo.description}</p>
+          </div>
+        </div>
+      )}
+
       <section className="hero glass">
         <div className="heroText">
           <p className="eyebrow">Engineering Portfolio</p>
@@ -77,11 +140,15 @@ function App() {
           </p>
 
           <div className="logoRow">
-            <img src={getImage("berkeley.svg")} alt="UC Berkeley" />
-            <img src={getImage("tesla.jpg")} alt="Tesla" />
-            <img src={getImage("spacex.jpg")} alt="SpaceX" />
-            <img src={getImage("bmcd.png")} alt="Burns & McDonnell" />
-            <img src={getImage("nsf.jpg")} alt="NSF" />
+            {logoItems.map((logo) => (
+              <button
+                className="logoButton"
+                key={logo.id}
+                onClick={() => setSelectedLogo(logo)}
+              >
+                <img src={getImage(logo.image)} alt={logo.alt} />
+              </button>
+            ))}
           </div>
         </div>
 

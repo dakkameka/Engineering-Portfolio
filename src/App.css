@@ -358,7 +358,7 @@ button {
 }
 
 .logoRow img {
-  height: 48px;
+  height: 64px;
   width: auto;
   object-fit: contain;
 
@@ -371,4 +371,66 @@ button {
   opacity: 1;
   filter: grayscale(0%);
   transform: translateY(-2px);
+}
+
+
+.logoButton {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(20, 25, 40, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.logoModal {
+  width: min(92vw, 520px);
+  padding: 34px;
+  text-align: center;
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: 0;
+  background: rgba(255,255,255,0.65);
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #172033;
+}
+
+.modalLogo {
+  max-width: 180px;
+  max-height: 78px;
+  object-fit: contain;
+  margin: 10px auto 24px;
+  display: block;
+}
+
+.logoModal h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+}
+
+.logoModal p {
+  margin: 18px auto 0;
+  max-width: 420px;
+  color: #41506b;
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
