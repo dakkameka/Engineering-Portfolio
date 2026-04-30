@@ -338,3 +338,14 @@ button {
     padding: 24px 22px;
   }
 }
+
+.projectDetailImage {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 24px;
+  margin-top: 36px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 16px 44px rgba(80,100,140,0.12);
+}

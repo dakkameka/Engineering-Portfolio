@@ -26,14 +26,6 @@ function App() {
             ← Back to portfolio
           </button>
 
-          {selectedProject.image && (
-            <img
-              src={getImage(selectedProject.image)}
-              alt={selectedProject.title}
-              className="projectHeroImage"
-            />
-          )}
-
           <p className="eyebrow">{selectedProject.tag}</p>
           <h1>{selectedProject.title}</h1>
           <p className="projectLead">{selectedProject.summary}</p>
@@ -55,6 +47,14 @@ function App() {
               system or analysis workflow.
             </p>
           </div>
+
+          {selectedProject.image && (
+            <img
+              src={getImage(selectedProject.image)}
+              alt={selectedProject.title}
+              className="projectDetailImage"
+            />
+          )}
         </section>
       </main>
     )
@@ -71,14 +71,16 @@ function App() {
           <p className="eyebrow">Engineering Portfolio</p>
           <h1>Lilly Sweet</h1>
           <p className="bio">
-            Mechanical engineering graduate student at UC Berkeley and former Combat Medic Sergeant in the US Army. 
-            Passionate about fluid dynamics, mechanical design, and robotics. I have ongoing work with the Flow Lab at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns & McDonnell.
+            Mechanical engineering graduate student at UC Berkeley and former Combat Medic Sergeant in the US Army.
+            Passionate about fluid dynamics, mechanical design, and robotics. I have ongoing work with the Flow Lab
+            at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns & McDonnell.
           </p>
 
           <div className="heroTags">
             <span>CFD</span>
             <span>Mechanical Design</span>
             <span>Robotics</span>
+            <span>Academia</span>
           </div>
         </div>
 
@@ -114,12 +116,16 @@ function App() {
                 <div className="carousel">
                   {category.projects.map((project) => (
                     <article className="projectCard" key={project.id}>
-                      {project.image && (
+                      {project.image ? (
                         <img
                           src={getImage(project.image)}
                           alt={project.title}
                           className="projectImage"
                         />
+                      ) : (
+                        <div className="projectImagePlaceholder">
+                          Add image
+                        </div>
                       )}
 
                       <p className="projectTag">{project.tag}</p>
