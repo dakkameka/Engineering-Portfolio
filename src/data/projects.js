@@ -76,7 +76,7 @@ export const categories = [
         title: "Pressure-Sensing Insole System For Camwalker",
         image: "camwalker.png",
         tag: "Wearables / Sensors",
-        summary: "Embedded pressure-map system for real-time gait and loading visualization.",
+        summary: "Mechanically designed and integrated a pressure-sensing insole system for real-time gait and loading visualization.",
         tools: ["ESP32", "C++", "Python", "Web UI", "Sensors"],
         detail:
           "This project uses pressure sensors, embedded electronics, and a lightweight interface to visualize loading patterns. The work combines hardware integration, firmware, data streaming, and user-facing visualization."
@@ -150,30 +150,30 @@ export const categories = [
         title: "Continuum Mechanics / Rheology Lecture",
         image: "continuum.png",
         tag: "Teaching",
-        summary: "Space for teaching materials, lecture notes, and continuum mechanics communication.",
+        summary: "Lecture on rheology specifically focused on anisotropic and thixotropic flow.",
         tools: ["Continuum Mechanics", "Rheology", "Teaching"],
         detail:
-          "Placeholder for teaching and lecture material related to continuum mechanics and rheology."
+          "Gave a lecture on rheology specifically focused on anisotropic and thixotropic flow."
       },
       {
         id: "limited-angle-xpiv-methods",
         title: "Limited-Angle XPIV Methods",
         image: "xpiv.png",
         tag: "Research",
-        summary: "Space for limited-angle X-ray particle image velocimetry methods and analysis.",
+        summary: "Unpublished Research",
         tools: ["XPIV", "X-ray Imaging", "Methods", "Research"],
         detail:
-          "Placeholder for research work on limited-angle XPIV methods, reconstruction constraints, uncertainty, and flow diagnostics."
+          "Unpublished Research"
       },
       {
         id: "regolith-depth-measurement",
         title: "Regolith Depth Measurement Project",
         image: "geant4.png",
         tag: "Research",
-        summary: "Space for X-ray regolith depth measurement research and experimental planning.",
+        summary: "Unpublished Research",
         tools: ["X-ray Imaging", "Regolith", "Experimental Design", "Research"],
         detail:
-          "Placeholder for research on measuring evolving regolith bed depth using X-ray attenuation and experimental diagnostics."
+          "Unpublished Research"
       }
     ]
   }
