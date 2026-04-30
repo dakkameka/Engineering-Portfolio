@@ -64,6 +64,7 @@ export const categories = [
       {
         id: "coach-nova",
         title: "Coach Nova",
+        image: "coachnova.png",
         tag: "Microcontrollers / Web Design / API Implementation",
         summary: "A web-based coaching platform integrating microcontroller data for real-time feedback.",
         tools: ["ESP32", "C++", "Python", "React", "Web Development"],
@@ -73,6 +74,7 @@ export const categories = [
       {
         id: "pressure-sensing-insole",
         title: "Pressure-Sensing Insole System For Camwalker",
+        image: "camwalker.png",
         tag: "Wearables / Sensors",
         summary: "Embedded pressure-map system for real-time gait and loading visualization.",
         tools: ["ESP32", "C++", "Python", "Web UI", "Sensors"],
@@ -82,6 +84,7 @@ export const categories = [
       {
         id: "adaptive-training-wheels",
         title: "Adaptive Training Wheels",
+        image: "bike.png",
         tag: "Design / Fabrication",
         summary: "Mechanical design and fabrication of adaptive training wheels for bicycles.",
         tools: ["CAD", "3D Printing", "Mechanical Design", "Fabrication"],
@@ -108,6 +111,7 @@ export const categories = [
       {
         id: "automated-machining-inspection",
         title: "Automated Machining Inspection",
+        image: "irb1300.png",
         tag: "Automation",
         summary: "Automated inspection system for machining processes.",
         tools: ["Computer Vision", "PLC", "Controls", "IRB 1300", "ABB RobotStudio"],
@@ -115,10 +119,11 @@ export const categories = [
           "Developed an automated inspection system for machining processes using computer vision and robotics. The system integrated a PLC for process control, an ABB IRB 1300 robot for handling and positioning, and custom vision algorithms to detect defects and support manufacturing quality control."
       },
       {
-        id: "robot1",
-        title: "robot1",
-        tag: "robot1",
-        summary: "add later",
+        id: "Hardware for Insole Pressure Mapping System",
+        title: "Hardware for Insole Pressure Mapping System",
+        image: "insolehardware.png",
+        tag: "Wearables / Sensors",
+        summary: "Embedded pressure-map system for real-time gait and loading visualization.",
         tools: ["IMU", "Controls", "Signal Processing", "React"],
         detail:
           "This system concept uses inertial sensing to provide real-time feedback during strength training. Target measurements include bar speed, tilt, depth, lockout, and fatigue-related velocity loss."
@@ -126,6 +131,7 @@ export const categories = [
       {
         id: "robot-controls",
         title: "Industrial Controls and Robotics",
+        image: "plc.png",
         tag: "Automation",
         summary: "Controls-oriented robotics work involving PLCs, robot tooling, and automation systems.",
         tools: ["PLC", "ABB RobotStudio", "Controls", "Electrical Systems"],
@@ -142,6 +148,7 @@ export const categories = [
       {
         id: "continuum-rheology-lecture",
         title: "Continuum Mechanics / Rheology Lecture",
+        image: "continuum.png",
         tag: "Teaching",
         summary: "Space for teaching materials, lecture notes, and continuum mechanics communication.",
         tools: ["Continuum Mechanics", "Rheology", "Teaching"],
@@ -151,6 +158,7 @@ export const categories = [
       {
         id: "limited-angle-xpiv-methods",
         title: "Limited-Angle XPIV Methods",
+        image: "xpiv.png",
         tag: "Research",
         summary: "Space for limited-angle X-ray particle image velocimetry methods and analysis.",
         tools: ["XPIV", "X-ray Imaging", "Methods", "Research"],
@@ -160,6 +168,7 @@ export const categories = [
       {
         id: "regolith-depth-measurement",
         title: "Regolith Depth Measurement Project",
+        image: "geant4.png",
         tag: "Research",
         summary: "Space for X-ray regolith depth measurement research and experimental planning.",
         tools: ["X-ray Imaging", "Regolith", "Experimental Design", "Research"],
