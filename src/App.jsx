@@ -11,6 +11,16 @@ const getImage = (name) => {
   return images[`./assets/${name}`]
 }
 
+const ProjectVideo = ({ project, className }) => (
+  <iframe
+    className={className}
+    src={project.video}
+    title={`${project.title} video`}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+)
+
 const logoItems = [
   {
     id: "berkeley",
@@ -59,6 +69,11 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null)
   const [selectedLogo, setSelectedLogo] = useState(null)
 
+  const openProject = (project) => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    setSelectedProject(project)
+  }
+
   if (selectedProject) {
     return (
       <main className="page">
@@ -80,9 +95,22 @@ function App() {
             ))}
           </div>
 
+          {selectedProject.github && (
+            <a
+              className="projectLink"
+              href={selectedProject.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View GitHub
+            </a>
+          )}
+
           <div className="projectBody">
             <h2>Project overview</h2>
-            <p>{selectedProject.detail}</p>
+            {selectedProject.detail.split("\n\n").map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
 
             <h2>What this demonstrates</h2>
             <p>
@@ -92,7 +120,9 @@ function App() {
             </p>
           </div>
 
-          {selectedProject.image && (
+          {selectedProject.video ? (
+            <ProjectVideo project={selectedProject} className="projectDetailVideo" />
+          ) : selectedProject.image && (
             <img
               src={getImage(selectedProject.image)}
               alt={selectedProject.title}
@@ -184,7 +214,9 @@ function App() {
                 <div className="carousel">
                   {category.projects.map((project) => (
                     <article className="projectCard" key={project.id}>
-                      {project.image ? (
+                      {project.video ? (
+                        <ProjectVideo project={project} className="projectVideo" />
+                      ) : project.image ? (
                         <img
                           src={getImage(project.image)}
                           alt={project.title}
@@ -206,7 +238,7 @@ function App() {
                         ))}
                       </div>
 
-                      <button onClick={() => setSelectedProject(project)}>
+                      <button onClick={() => openProject(project)}>
                         Expand project
                       </button>
                     </article>

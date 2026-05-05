@@ -236,6 +236,30 @@ button {
   line-height: 1.55;
 }
 
+.projectVideo,
+.projectImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.52);
+  object-fit: cover;
+}
+
+.projectImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 18px;
+}
+
+.projectImagePlaceholder {
+  display: grid;
+  place-items: center;
+  color: #73809a;
+}
+
 .miniTools {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +269,8 @@ button {
 }
 
 .projectCard button,
-.backButton {
+.backButton,
+.projectLink {
   border: 0;
   border-radius: 999px;
   padding: 12px 16px;
@@ -256,9 +281,17 @@ button {
 }
 
 .projectCard button:hover,
-.backButton:hover {
+.backButton:hover,
+.projectLink:hover {
   transform: translateY(-2px);
   opacity: 0.9;
+}
+
+.projectLink {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 12px;
+  text-decoration: none;
 }
 
 .projectPage {
@@ -339,15 +372,20 @@ button {
   }
 }
 
-.projectDetailImage {
+.projectDetailImage,
+.projectDetailVideo {
   width: 100%;
-  max-height: 420px;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   border-radius: 24px;
   margin-top: 36px;
   background: rgba(255,255,255,0.5);
   border: 1px solid rgba(255,255,255,0.85);
   box-shadow: 0 16px 44px rgba(80,100,140,0.12);
+}
+
+.projectDetailVideo {
+  border: 0;
 }
 .logoRow {
   display: flex;

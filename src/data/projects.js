@@ -65,6 +65,7 @@ export const categories = [
         id: "coach-nova",
         title: "Coach Nova",
         image: "coachnova.png",
+        github: "https://github.com/dakkameka/BarbellBuddy",
         tag: "Microcontrollers / Web Design / API Implementation",
         summary: "A web-based coaching platform integrating microcontroller data for real-time feedback.",
         tools: ["ESP32", "C++", "Python", "React", "Web Development"],
@@ -105,9 +106,20 @@ export const categories = [
   },
   {
     id: "robotics",
-    title: "Robotics",
+    title: "Hardware/Software",
     subtitle: "Sensors, embedded systems, controls, mechatronics, and feedback systems.",
     projects: [
+      {
+        id: "canopy",
+        title: "CANOPY",
+        video: "https://www.youtube-nocookie.com/embed/NzDcP5XryC4",
+        github: "https://github.com/787-10/CANOPY",
+        tag: "Space Defense / AI Systems",
+        summary: "Hackathon-winning, edge-deployed cross-domain space defense decision system for tactical commanders.",
+        tools: ["AI Agents", "Skyfield", "SGP4", "Jetson", "RTX 3090"],
+        detail:
+          "\"We must defend U.S. space capabilities, and we must protect our forces from space-enabled attack.\" - CSO Gen. Saltzman, Space Warfighting, March 2025\n\nCANOPY won $20,000 at a hackathon for its approach to tactical space defense decision support.\n\nSpace supports every fight. CANOPY lets every fight support space. A brigade in the field depends on space for everything: GPS, encrypted radio, blue force tracker, satellite imagery. But adversaries no longer attack space alone. They jam signals on the ground, probe networks through cyber, and maneuver inspector satellites in orbit. Today, no one fuses those signals fast enough to see it. CANOPY does.\n\nIt ingests data from every domain: RF, cyber, OSINT, HUMINT, satellite tracks, GPS integrity, comms health, and drone sensors. It turns this into a single decision a brigade commander can act on. Three AI agents (gemma4:e2b) make that decision auditable: one names the adversary, a red team challenges it, and a reconciler produces the final assessment with calibrated confidence.\n\nEvery action is grounded in real orbital mechanics (Skyfield/SGP4) and a doctrine-grounded threat knowledge base with ROE. Every step is visible and traceable on screen. The output is one of three actions: passive defense, active defense, or strike request, which are routed automatically to the proper authority. The commander gets one button. The right response gets the right approval at tactical speed.\n\nCANOPY runs at the edge on a single Nvidia Jetson with an RTX 3090, and can go from first anomaly sensed to decision in <20 seconds. We also ship an evaluation harness with an adversarial scenario benchmark to measure attribution accuracy and confidence calibration; this serves as a foundation for frontier labs to red-team agentic systems against real & simulated cross-domain campaigns in Space."
+      },
       {
         id: "automated-machining-inspection",
         title: "Automated Machining Inspection",
