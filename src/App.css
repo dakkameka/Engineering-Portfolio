@@ -127,8 +127,10 @@ button {
 
 .portraitCard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 18px;
 }
 
 .portraitWrap {
@@ -148,6 +150,213 @@ button {
   object-position: center;
 }
 
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contactLinks a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #3c4b66;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 30px rgba(80, 100, 140, 0.12);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.contactLinks a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.contactLinks svg {
+  width: 19px;
+  height: 19px;
+}
+
+.timelineSection {
+  max-width: 1180px;
+  margin: 0 auto 28px;
+  padding: 28px 36px 36px;
+}
+
+.timelineHeader {
+  margin-bottom: 18px;
+}
+
+.timelineHeader h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.timelineHeader > p {
+  max-width: 440px;
+  margin: 0;
+  color: #41506b;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.timelineViewport {
+  overflow-x: auto;
+  padding: 8px 8px 6px;
+}
+
+.timelineAxis,
+.timelineTrack {
+  position: relative;
+  min-width: 860px;
+}
+
+.timelineAxis {
+  height: 38px;
+  border-bottom: 1px solid rgba(23, 32, 51, 0.16);
+}
+
+.timelineTick {
+  position: absolute;
+  bottom: -1px;
+  transform: translateX(-1px);
+  width: 2px;
+  height: 18px;
+  background: rgba(23, 32, 51, 0.26);
+}
+
+.timelineTick span {
+  position: absolute;
+  bottom: 24px;
+  transform: translateX(-50%);
+  color: #63718f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.timelineTrack {
+  height: 194px;
+  margin-top: 8px;
+  border-radius: 20px;
+  background:
+    linear-gradient(90deg, rgba(23, 32, 51, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.28));
+  background-size: calc(100% / 6) 100%, 100% 100%;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+}
+
+.timelineSpan {
+  position: absolute;
+  min-width: 104px;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: #172033;
+  background: linear-gradient(135deg, rgba(255, 214, 232, 0.92), rgba(201, 231, 255, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 26px rgba(80, 100, 140, 0.12);
+  overflow: hidden;
+}
+
+.timelineSpan[data-variant="future"] {
+  color: #41506b;
+  background: rgba(255, 255, 255, 0.42);
+  border: 2px dashed rgba(99, 113, 143, 0.42);
+  box-shadow: none;
+}
+
+.timelineSpan[data-variant="education"] {
+  background: linear-gradient(135deg, rgba(216, 247, 232, 0.94), rgba(222, 214, 255, 0.86));
+}
+
+.timelineSpan[data-variant="campus"] {
+  color: #63718f;
+  background: linear-gradient(135deg, rgba(230, 234, 241, 0.94), rgba(244, 246, 249, 0.9));
+  border-color: rgba(210, 217, 229, 0.88);
+}
+
+.timelineSpan[data-variant="light"] {
+  color: #8791a4;
+  background: rgba(248, 250, 253, 0.76);
+  border-color: rgba(226, 231, 238, 0.72);
+  box-shadow: none;
+}
+
+.timelineSpan span,
+.milestoneCard span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.timelineSpan h3,
+.milestoneCard h3 {
+  margin: 0;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.timelineSpan p,
+.milestoneCard p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.timelineSpan p {
+  color: #53617c;
+}
+
+.timelineMilestone {
+  position: absolute;
+  top: 116px;
+  transform: translateX(-50%);
+}
+
+.milestonePin {
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: #ff9ec9;
+  border: 2px solid white;
+  box-shadow: 0 10px 26px rgba(255, 158, 201, 0.36);
+}
+
+.timelineMilestone::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 10px;
+  margin: 0 auto;
+  background: linear-gradient(#ff9ec9, rgba(255, 158, 201, 0));
+}
+
+.milestoneCard {
+  width: max-content;
+  max-width: 118px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 26px rgba(80, 100, 140, 0.14);
+}
+
+.milestoneCard span {
+  color: #b14f7a;
+}
+
+.milestoneCard p {
+  color: #53617c;
+}
+
 .categories {
   max-width: 1180px;
   margin: 0 auto;
@@ -157,6 +366,32 @@ button {
 
 .category {
   overflow: hidden;
+}
+
+.resumeSection {
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 13px 18px;
+  background: #172033;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(80, 100, 140, 0.18);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.resumeButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .categoryHeader {
@@ -355,6 +590,18 @@ button {
   .hero {
     grid-template-columns: 1fr;
     padding: 28px;
+  }
+
+  .timelineSection {
+    padding: 28px 22px 30px;
+  }
+
+  .timelineHeader {
+    display: block;
+  }
+
+  .timelineHeader > p {
+    margin-top: 14px;
   }
 
   .projectPage {
