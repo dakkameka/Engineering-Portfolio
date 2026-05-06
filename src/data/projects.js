@@ -35,16 +35,6 @@ export const categories = [
           "Developed a viscous NACA0012 unstructured-mesh solver with second-order space and time accuracy, with optional third-order capability. The code plots Mach number, pressure distribution, skin friction coefficient, streamlines, and contours for Mach number, pressure, density, x velocity, y velocity, velocity magnitude, and energy. The implementation includes local and global time stepping, first- and second-order least-squares reconstruction, and an almost fully vectorized structure for computational speed."
       },
       {
-        id: "microchannel-flow",
-        title: "Microchannel Flow Optimization",
-        image: "microchannel.jpg",
-        tag: "Commercial CFD",
-        summary: "Taguchi-method DOE study for optimizing fluid mixing in microchannel flow.",
-        tools: ["CFD", "Design of Experiments", "Taguchi Method", "Simulation"],
-        detail:
-          "Used a Design of Experiments approach with the Taguchi Method to optimize fluid mixing in a microchannel. The project used a commercial CFD solver to numerically simulate microchannel flow behavior and won second place in a research competition."
-      },
-      {
         id: "fsae-aerodynamics",
         title: "FSAE Aerodynamics",
         image: "FSAE.jpg",
@@ -53,6 +43,16 @@ export const categories = [
         tools: ["STAR-CCM+", "CFD", "FEA", "Mechanical Design"],
         detail:
           "Owned several parts within the Formula SAE aerodynamic package and ran extensive CFD simulations of the full car in STAR-CCM+. Improved the downforce-to-drag ratio, balanced the coefficient of pressure, reduced y+ values, ran a transient full-car model, and improved simulation conduct and workflow. Also took ownership of the rear wing mounting design, performed FEA for several riding conditions, and helped manufacture the final parts."
+      },
+      {
+        id: "microchannel-flow",
+        title: "Microchannel Flow Optimization",
+        image: "microchannel.jpg",
+        tag: "Commercial CFD",
+        summary: "Taguchi-method DOE study for optimizing fluid mixing in microchannel flow.",
+        tools: ["CFD", "Design of Experiments", "Taguchi Method", "Simulation"],
+        detail:
+          "Used a Design of Experiments approach with the Taguchi Method to optimize fluid mixing in a microchannel. The project used a commercial CFD solver to numerically simulate microchannel flow behavior and won second place in a research competition."
       }
     ]
   },
