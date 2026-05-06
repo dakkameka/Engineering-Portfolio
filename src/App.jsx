@@ -232,6 +232,15 @@ const timelineSpans = [
     variant: "campus"
   },
   {
+    id: "volunteer-emt",
+    label: "Volunteer EMT",
+    range: "May 2021 - Aug 2022",
+    startMonth: 17,
+    endMonth: 31,
+    lane: 3,
+    variant: "light"
+  },
+  {
     id: "si-leader",
     label: "SI Leader",
     range: "Aug 2022 - May 2023",
