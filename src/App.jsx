@@ -136,13 +136,13 @@ const logoItems = [
 ]
 
 const timelineStartMonth = 0
-const timelineEndMonth = 84
+const timelineEndMonth = 96
 
 const getTimelinePosition = (month) => {
   return `${((month - timelineStartMonth) / (timelineEndMonth - timelineStartMonth)) * 100}%`
 }
 
-const timelineYears = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
+const timelineYears = [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027]
 
 const timelineSpans = [
   {
@@ -159,14 +159,15 @@ const timelineSpans = [
     range: "Summer 2023",
     startMonth: 41,
     endMonth: 44,
-    lane: 1
+    lane: 1,
+    centerMonth: 41.75
   },
   {
     id: "truck-unloader",
     label: "Truck Unloader -> Pharmacy Technician",
-    range: "2020 - Summer 2023",
+    range: "2020 - Spring 2023",
     startMonth: 0,
-    endMonth: 41,
+    endMonth: 37,
     lane: 1,
     variant: "light"
   },
@@ -176,7 +177,8 @@ const timelineSpans = [
     range: "Summer 2024",
     startMonth: 53,
     endMonth: 56,
-    lane: 1
+    lane: 1,
+    centerMonth: 53.75
   },
   {
     id: "spacex-2025",
@@ -184,7 +186,8 @@ const timelineSpans = [
     range: "Summer 2025",
     startMonth: 65,
     endMonth: 68,
-    lane: 1
+    lane: 1,
+    centerMonth: 65.75
   },
   {
     id: "spacex-2026",
@@ -193,7 +196,17 @@ const timelineSpans = [
     startMonth: 77,
     endMonth: 80,
     lane: 1,
-    variant: "future"
+    centerMonth: 77.75
+  },
+  {
+    id: "spacex-aerothermal-2026",
+    label: "SpaceX Aerothermal Engineer I",
+    range: "Sep 2026 - Dec 2026",
+    startMonth: 80,
+    endMonth: 84,
+    lane: 0,
+    width: "250px",
+    variant: "future-gradient"
   },
   {
     id: "ku",
@@ -216,7 +229,7 @@ const timelineSpans = [
   {
     id: "berkeley",
     label: "Berkeley",
-    range: "Aug 2025 - Present",
+    range: "Aug 2025 - Dec 2026",
     startMonth: 67,
     endMonth: 84,
     lane: 2,
@@ -225,37 +238,19 @@ const timelineSpans = [
   {
     id: "nsf-fellow-researcher",
     label: "NSF Fellow (Researcher)",
-    range: "Aug 2025 - Present",
+    range: "Aug 2025 - Dec 2026",
     startMonth: 67,
     endMonth: 84,
     lane: 3,
     variant: "campus"
   },
   {
-    id: "volunteer-emt",
-    label: "Volunteer EMT",
-    range: "May 2021 - Aug 2022",
-    startMonth: 17,
-    endMonth: 31,
-    lane: 3,
-    variant: "light"
-  },
-  {
     id: "si-leader",
-    label: "SI Leader",
-    range: "Aug 2022 - May 2023",
+    label: "SI Leader / Peer Tutor",
+    range: "Aug 2022 - May 2024",
     startMonth: 31,
-    endMonth: 41,
-    lane: 3,
-    variant: "campus"
-  },
-  {
-    id: "peer-tutor",
-    label: "Peer Tutor",
-    range: "Jan 2023 - May 2024",
-    startMonth: 36,
     endMonth: 53,
-    lane: 4,
+    lane: 3,
     variant: "campus"
   },
   {
@@ -372,9 +367,11 @@ function App() {
           <p className="eyebrow">Engineering Portfolio</p>
           <h1>Lilly Sweet</h1>
           <p className="bio">
-            Mechanical engineering graduate student at UC Berkeley and former Combat Medic Sergeant in the US Army.
-            Passionate about fluid dynamics, mechanical design, and robotics. I have ongoing work with the Flow Lab
-            at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns & McDonnell.
+            Full time Aero/Thermal Engineer at SpaceX supporting Dragon, Falcon, Starfall, and special projects.
+            Also currently a mechanical engineering graduate student at UC Berkeley and former Combat Medic Sergeant
+            in the US Army. Passionate about fluid dynamics, mechanical design, and robotics. I have ongoing work with
+            the Flow Lab at UC Berkeley, am an NSF Fellow, and have previous experience at Tesla, SpaceX, and Burns &
+            McDonnell.
           </p>
 
           <div className="logoRow">
@@ -423,7 +420,7 @@ function App() {
           </div>
         </div>
 
-        <div className="timelineViewport" aria-label="Career timeline from 2020 to now">
+        <div className="timelineViewport" aria-label="Career timeline from January 2020 through 2027">
           <div className="timelineAxis">
             {timelineYears.map((year, index) => (
               <div
@@ -442,8 +439,9 @@ function App() {
                 className="timelineSpan"
                 key={span.id}
                 style={{
-                  left: getTimelinePosition(span.startMonth),
-                  width: `calc(${getTimelinePosition(span.endMonth - span.startMonth)} - 10px)`,
+                  left: getTimelinePosition(span.centerMonth || span.startMonth),
+                  width: span.width || `calc(${getTimelinePosition(span.endMonth - span.startMonth)} - 10px)`,
+                  transform: span.centerMonth ? "translateX(-50%)" : undefined,
                   top: `${18 + span.lane * 34}px`
                 }}
                 data-variant={span.variant}

@@ -212,7 +212,7 @@ button {
 .timelineAxis,
 .timelineTrack {
   position: relative;
-  min-width: 860px;
+  min-width: 1080px;
 }
 
 .timelineAxis {
@@ -240,13 +240,13 @@ button {
 }
 
 .timelineTrack {
-  height: 194px;
+  height: 170px;
   margin-top: 8px;
   border-radius: 20px;
   background:
     linear-gradient(90deg, rgba(23, 32, 51, 0.08) 1px, transparent 1px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.28));
-  background-size: calc(100% / 6) 100%, 100% 100%;
+  background-size: calc(100% / 8) 100%, 100% 100%;
   border: 1px solid rgba(255, 255, 255, 0.82);
 }
 
@@ -268,6 +268,12 @@ button {
   background: rgba(255, 255, 255, 0.42);
   border: 2px dashed rgba(99, 113, 143, 0.42);
   box-shadow: none;
+}
+
+.timelineSpan[data-variant="future-gradient"] {
+  color: #253149;
+  background: linear-gradient(135deg, rgba(255, 214, 232, 0.92) 0%, rgba(201, 231, 255, 0.9) 48%, rgba(230, 234, 241, 0.9) 100%);
+  border-color: rgba(220, 226, 236, 0.9);
 }
 
 .timelineSpan[data-variant="education"] {
